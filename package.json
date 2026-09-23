@@ -1,0 +1,27 @@
+{
+  "name": "taekwondo-association-navsari",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "npm --workspace apps/web run build",
+    "build:api": "npm --workspace apps/api run build"
+  },
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "devDependencies": {
+    "eslint": "^10.11.0",
+    "playwright": "^1.63.0",
+    "prettier": "^3.9.8",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.2",
+    "mongodb": "^7.6.0"
+  }
+}
